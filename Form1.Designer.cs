@@ -180,7 +180,7 @@
             this.MinimumSize = new System.Drawing.Size(451, 400);
             this.Name = "DescriptionHelper";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Description Helper";
+            this.Text = "Helper NOWO";
             this.TopMost = true;
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
