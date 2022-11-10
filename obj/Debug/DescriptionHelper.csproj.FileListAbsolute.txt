@@ -9,3 +9,14 @@ C:\Users\Nicolau\source\repos\DescriptionHelper\obj\Debug\DescriptionHelper.cspr
 C:\Users\Nicolau\source\repos\DescriptionHelper\obj\Debug\DescriptionHelper.exe
 C:\Users\Nicolau\source\repos\DescriptionHelper\obj\Debug\DescriptionHelper.pdb
 C:\Users\Nicolau\source\repos\DescriptionHelper\obj\Debug\DescriptionHelper.DescriptionHelper.resources
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\bin\Debug\HelperNOWO.exe.config
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\bin\Debug\HelperNOWO.exe
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\bin\Debug\HelperNOWO.pdb
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Debug\DescriptionHelper.csproj.AssemblyReference.cache
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Debug\DescriptionHelper.csproj.SuggestedBindingRedirects.cache
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Debug\DescriptionHelper.DescriptionHelper.resources
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Debug\HelperNOWO.Properties.Resources.resources
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Debug\DescriptionHelper.csproj.GenerateResource.cache
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Debug\DescriptionHelper.csproj.CoreCompileInputs.cache
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Debug\HelperNOWO.exe
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Debug\HelperNOWO.pdb
