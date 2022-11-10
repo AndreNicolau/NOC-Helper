@@ -1,0 +1,15 @@
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\bin\Debug\HelperNOWO.exe.config
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\bin\Debug\HelperNOWO.exe.manifest
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\bin\Debug\HelperNOWO.application
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\bin\Debug\HelperNOWO.exe
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\bin\Debug\HelperNOWO.pdb
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Debug\HelperNOWO.csproj.AssemblyReference.cache
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Debug\HelperNOWO.csproj.SuggestedBindingRedirects.cache
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Debug\DescriptionHelper.DescriptionHelper.resources
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Debug\HelperNOWO.Properties.Resources.resources
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Debug\HelperNOWO.csproj.GenerateResource.cache
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Debug\HelperNOWO.csproj.CoreCompileInputs.cache
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Debug\HelperNOWO.exe.manifest
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Debug\HelperNOWO.application
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Debug\HelperNOWO.exe
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Debug\HelperNOWO.pdb
