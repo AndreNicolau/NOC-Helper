@@ -1,0 +1,11 @@
+C:\Users\Nicolau\source\repos\DescriptionHelper\bin\Debug\DescriptionHelper.exe.config
+C:\Users\Nicolau\source\repos\DescriptionHelper\bin\Debug\DescriptionHelper.exe
+C:\Users\Nicolau\source\repos\DescriptionHelper\bin\Debug\DescriptionHelper.pdb
+C:\Users\Nicolau\source\repos\DescriptionHelper\obj\Debug\DescriptionHelper.csproj.AssemblyReference.cache
+C:\Users\Nicolau\source\repos\DescriptionHelper\obj\Debug\DescriptionHelper.csproj.SuggestedBindingRedirects.cache
+C:\Users\Nicolau\source\repos\DescriptionHelper\obj\Debug\DescriptionHelper.Properties.Resources.resources
+C:\Users\Nicolau\source\repos\DescriptionHelper\obj\Debug\DescriptionHelper.csproj.GenerateResource.cache
+C:\Users\Nicolau\source\repos\DescriptionHelper\obj\Debug\DescriptionHelper.csproj.CoreCompileInputs.cache
+C:\Users\Nicolau\source\repos\DescriptionHelper\obj\Debug\DescriptionHelper.exe
+C:\Users\Nicolau\source\repos\DescriptionHelper\obj\Debug\DescriptionHelper.pdb
+C:\Users\Nicolau\source\repos\DescriptionHelper\obj\Debug\DescriptionHelper.DescriptionHelper.resources

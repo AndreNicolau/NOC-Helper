@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DescriptionHelper", "DescriptionHelper.csproj", "{86068A7E-F0C6-4E1C-885B-349FF1E47E0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86068A7E-F0C6-4E1C-885B-349FF1E47E0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86068A7E-F0C6-4E1C-885B-349FF1E47E0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86068A7E-F0C6-4E1C-885B-349FF1E47E0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86068A7E-F0C6-4E1C-885B-349FF1E47E0D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D970FC3-88B4-4945-AF58-B6258EEAE328}
+	EndGlobalSection
+EndGlobal
