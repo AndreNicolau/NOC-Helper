@@ -8,18 +8,19 @@ namespace DescriptionHelper
         private string nomeTecnico = "*Nome do Técnico*";
         private string contactoTecnico = "*Contacto do Técnico*";
 
+        private bool isDefault = true;
+
         public DescriptionHelper()
         {
             InitializeComponent();
 
+            //comboBox1.SelectedIndex = 0;
             txtDescricao.Text = $"O técnico {nomeTecnico} ({contactoTecnico}) contacta e informa que ";
         }
 
         public void LoadDefaults()
         {
-            btnAfetacaoDispersa.Text = "Afetação dispersa.";
-            btnEmAnalise.Text = "Em análise.";
-
+            isDefault = true;
             btnCopy.Text = "Copiar";
         }
 
@@ -27,13 +28,17 @@ namespace DescriptionHelper
         {
             if (txtNomeTecnico.Text == "")
             {
+                isDefault = true;
                 nomeTecnico = "*Nome do Técnico*";
             }
 
             if (txtContactoTecnico.Text == "")
             {
+                isDefault = true;
                 contactoTecnico = "*Contacto do Técnico*";
             }
+
+            isDefault = false;
 
             txtDescricao.Text = $"O técnico {nomeTecnico} ({contactoTecnico}) contacta e informa que ";
         }
@@ -50,20 +55,6 @@ namespace DescriptionHelper
             UpdateDescription();
         }
 
-        private void btnAfetacaoDispersa_Click(object sender, EventArgs e)
-        {
-            Clipboard.SetText(btnAfetacaoDispersa.Text);
-            btnAfetacaoDispersa.Text = "Copiado";
-            CountDown.Start();
-
-        }
-        private void btnEmAnalise_Click(object sender, EventArgs e)
-        {
-            Clipboard.SetText(btnEmAnalise.Text);
-            btnEmAnalise.Text = "Copiado";
-            CountDown.Start();
-        }
-
         private void CountDown_Tick(object sender, EventArgs e)
         {
             CountDown.Enabled = false;
@@ -72,9 +63,24 @@ namespace DescriptionHelper
 
         private void btnCopy_Click(object sender, EventArgs e)
         {
+
             Clipboard.SetText(txtDescricao.Text);
             btnCopy.Text = "Copiado";
             CountDown.Start();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex != -1)
+            {
+                Clipboard.SetText(listBox1.Text);
+                btnCopy.Text = "Copiado";
+                CountDown.Start();
+            }
+            else
+            {
+                listBox1.SelectedIndex = 0;
+            }
         }
     }
 }

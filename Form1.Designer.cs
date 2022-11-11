@@ -36,11 +36,8 @@
             this.txtContactoTecnico = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.RichTextBox();
             this.btnCopy = new System.Windows.Forms.Button();
-            this.btnAfetacaoDispersa = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnEmAnalise = new System.Windows.Forms.Button();
             this.CountDown = new System.Windows.Forms.Timer(this.components);
-            this.flowLayoutPanel1.SuspendLayout();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -64,7 +61,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(187, 23);
+            this.label2.Location = new System.Drawing.Point(13, 69);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 16);
@@ -86,7 +83,7 @@
             // 
             this.txtContactoTecnico.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtContactoTecnico.Location = new System.Drawing.Point(190, 43);
+            this.txtContactoTecnico.Location = new System.Drawing.Point(16, 89);
             this.txtContactoTecnico.Margin = new System.Windows.Forms.Padding(4);
             this.txtContactoTecnico.Name = "txtContactoTecnico";
             this.txtContactoTecnico.Size = new System.Drawing.Size(99, 22);
@@ -95,21 +92,17 @@
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescricao.Location = new System.Drawing.Point(13, 84);
+            this.txtDescricao.Location = new System.Drawing.Point(13, 135);
             this.txtDescricao.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(409, 114);
+            this.txtDescricao.Size = new System.Drawing.Size(300, 120);
             this.txtDescricao.TabIndex = 4;
             this.txtDescricao.Text = "";
             // 
             // btnCopy
             // 
-            this.btnCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCopy.AutoEllipsis = true;
-            this.btnCopy.Location = new System.Drawing.Point(343, 206);
+            this.btnCopy.Location = new System.Drawing.Point(234, 263);
             this.btnCopy.Margin = new System.Windows.Forms.Padding(4);
             this.btnCopy.MaximumSize = new System.Drawing.Size(79, 26);
             this.btnCopy.Name = "btnCopy";
@@ -119,55 +112,32 @@
             this.btnCopy.UseVisualStyleBackColor = true;
             this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
             // 
-            // btnAfetacaoDispersa
-            // 
-            this.btnAfetacaoDispersa.BackColor = System.Drawing.Color.White;
-            this.btnAfetacaoDispersa.Location = new System.Drawing.Point(3, 2);
-            this.btnAfetacaoDispersa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAfetacaoDispersa.Name = "btnAfetacaoDispersa";
-            this.btnAfetacaoDispersa.Size = new System.Drawing.Size(80, 80);
-            this.btnAfetacaoDispersa.TabIndex = 6;
-            this.btnAfetacaoDispersa.Text = "Afetação dispersa.";
-            this.btnAfetacaoDispersa.UseVisualStyleBackColor = false;
-            this.btnAfetacaoDispersa.Click += new System.EventHandler(this.btnAfetacaoDispersa_Click);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.Controls.Add(this.btnAfetacaoDispersa);
-            this.flowLayoutPanel1.Controls.Add(this.btnEmAnalise);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 260);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(411, 190);
-            this.flowLayoutPanel1.TabIndex = 7;
-            // 
-            // btnEmAnalise
-            // 
-            this.btnEmAnalise.BackColor = System.Drawing.Color.White;
-            this.btnEmAnalise.Location = new System.Drawing.Point(89, 2);
-            this.btnEmAnalise.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEmAnalise.Name = "btnEmAnalise";
-            this.btnEmAnalise.Size = new System.Drawing.Size(80, 80);
-            this.btnEmAnalise.TabIndex = 7;
-            this.btnEmAnalise.Text = "Em análise,";
-            this.btnEmAnalise.UseVisualStyleBackColor = false;
-            this.btnEmAnalise.Click += new System.EventHandler(this.btnEmAnalise_Click);
-            // 
             // CountDown
             // 
             this.CountDown.Interval = 1000;
             this.CountDown.Tick += new System.EventHandler(this.CountDown_Tick);
+            // 
+            // listBox1
+            // 
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Items.AddRange(new object[] {
+            "Afetação dispersa.",
+            "Ticket: "});
+            this.listBox1.Location = new System.Drawing.Point(13, 301);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(180, 82);
+            this.listBox1.TabIndex = 9;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // DescriptionHelper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(435, 461);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(339, 441);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnCopy);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.txtContactoTecnico);
@@ -177,12 +147,10 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(451, 400);
             this.Name = "DescriptionHelper";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Helper NOWO";
             this.TopMost = true;
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,10 +164,8 @@
         private System.Windows.Forms.TextBox txtContactoTecnico;
         private System.Windows.Forms.RichTextBox txtDescricao;
         private System.Windows.Forms.Button btnCopy;
-        private System.Windows.Forms.Button btnAfetacaoDispersa;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Timer CountDown;
-        private System.Windows.Forms.Button btnEmAnalise;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

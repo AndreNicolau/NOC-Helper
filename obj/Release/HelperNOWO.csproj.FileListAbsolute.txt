@@ -9,3 +9,7 @@ C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Release\HelperNOWO.csproj.Gene
 C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Release\HelperNOWO.csproj.CoreCompileInputs.cache
 C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Release\HelperNOWO.exe
 C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Release\HelperNOWO.pdb
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\bin\Release\HelperNOWO.exe.manifest
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\bin\Release\HelperNOWO.application
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Release\HelperNOWO.exe.manifest
+C:\Users\Nicolau\Documents\GitHub\Helper-Nowo\obj\Release\HelperNOWO.application
