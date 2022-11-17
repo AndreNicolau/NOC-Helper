@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "HelperNOWO": {
+      "commandName": "Project",
+      "nativeDebugging": false
+    }
+  }
+}
