@@ -15,5 +15,5 @@ input,
 select,
 textarea {
     width: min-content;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
