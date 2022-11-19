@@ -10,33 +10,36 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
 
-    <div>
+    <div class="m-2">
         <label for="inpNomeTec">Nome do técnico</label>
-        <input type="text" name="inpNomeTec" id="inpNomeTec">
+        <input type="text" name="inpNomeTec" id="inpNomeTec" class="border-2 border-orange-500 rounded">
 
         <label for="inpContactoTec">Contacto do técnico</label>
-        <input type="text" name="inpContactoTec" id="inpContactoTec">
+        <input type="text" name="inpContactoTec" id="inpContactoTec" class="border-2 border-orange-500 rounded">
 
-        <textarea name="txtDescricao" id="txtDescricao" cols="30" rows="10">Técnico *nome* (*contacto*) contacta e informa que
+        <textarea name="txtDescricao" id="txtDescricao" cols="30" rows="10" class="border-2 border-orange-500 rounded p-1">Técnico *nome* (*contacto*) contacta e informa que
         </textarea>
 
-        <button class="btn btn-primary mybtn" id="inpCopiar">Copiar</button>
+        <button class="bg-orange-500 rounded w-20 text-white font-bold mybtn" id="inpCopiar">Copiar</button>
 
-        <select name="select" id="select">
+        <select name="select" id="select" class="bg-orange-500 text-white rounded">
             <option value="Afetação dispersa.">Afetação dispersa.</option>
             <option value="Ticket: ">Ticket: </option>
             <option value="SPOC CME contactado.">SPOC CME contactado.</option>
             <option value="SPOC ZENER contactado.">SPOC ZENER contactado.</option>
-            <option value="Tentativa de contacto sem sucesso com SPOC Zener xxx.">Tentativa de contacto sem sucesso com SPOC Zener xxx.</option>
-            <option value="Tentativa de contacto sem sucesso com SPOC CME.">Tentativa de contacto sem sucesso com SPOC CME.</option>
+            <option value="Tentativa de contacto sem sucesso com SPOC Zener xxx.">Tentativa de contacto sem sucesso com
+                SPOC Zener xxx.</option>
+            <option value="Tentativa de contacto sem sucesso com SPOC CME.">Tentativa de contacto sem sucesso com SPOC
+                CME.</option>
             <option value="Tickets SNR: ">Tickets SNR:</option>
-            <option value="XXXXX: Nó Óptico com problemas. Supervisão a averiguar.">XXXXX: Nó Óptico com problemas. Supervisão a averiguar.</option>
+            <option value="XXXXX: Nó Óptico com problemas. Supervisão a averiguar.">XXXXX: Nó Óptico com problemas.
+                Supervisão a averiguar.</option>
         </select>
 
     </div>
