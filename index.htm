@@ -16,20 +16,20 @@
 
 <body>
 
-    <div class="m-2">
+    <div class="grid m-2">
         <label for="inpNomeTec" class="font-bold">Nome do técnico</label>
-        <input type="text" name="inpNomeTec" id="inpNomeTec" class="border-2 border-orange-500 rounded">
+        <input type="text" name="inpNomeTec" id="inpNomeTec" class="border-2 border-orange-500 rounded w-fit">
 
         <label for="inpContactoTec" class="font-bold">Contacto do técnico</label>
-        <input type="text" name="inpContactoTec" id="inpContactoTec" class="border-2 border-orange-500 rounded">
+        <input type="text" name="inpContactoTec" id="inpContactoTec" class="border-2 border-orange-500 rounded w-fit">
 
         <textarea name="txtDescricao" id="txtDescricao" cols="30" rows="10"
-            class="border-2 border-orange-500 rounded p-1">Técnico *nome* (*contacto*) contactou e informa que
+            class="border-2 border-orange-500 rounded p-1 my-2 w-fit">Técnico *nome* (*contacto*) contactou e informa que
         </textarea>
 
-        <button class="bg-orange-500 rounded text-white font-bold mybtn" id="inpCopiar">Copiar</button>
+        <input type="button" value=" Copiar " id="inpCopiar" class="bg-orange-500 rounded text-white font-bold w-min my-2">
 
-        <select name="select" id="select" class="bg-orange-500 text-white rounded">
+        <select name="select" id="select" class="bg-orange-500 text-white rounded mb-2 w-fit">
             <option value="Afetação dispersa.">Afetação dispersa.</option>
             <option value="Ticket: ">Ticket: </option>
             <option value="SPOC CME contactado.">SPOC CME contactado.</option>
@@ -39,7 +39,7 @@
             <option value="Tentativa de contacto sem sucesso com SPOC CME.">Tentativa de contacto sem sucesso com SPOC
                 CME.</option>
             <option value="Tickets SNR: ">Tickets SNR:</option>
-            <option value="XXXXX: Nó Óptico com problemas. Supervisão a averiguar.">XXXXX: Nó Óptico com problemas.
+            <option value="xxxxx: Nó Óptico com problemas. Supervisão a averiguar.">xxxxx: Nó Óptico com problemas.
                 Supervisão a averiguar.</option>
         </select>
 
