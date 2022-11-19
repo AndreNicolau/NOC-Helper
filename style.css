@@ -13,3 +13,7 @@ textarea {
     width: min-content;
     margin-bottom: 20px;
 }
+
+input[type=button] {
+    margin: 10px 0px 10px 0px;
+}
