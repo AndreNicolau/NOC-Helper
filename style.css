@@ -14,3 +14,7 @@ textarea {
     width: min-content;
     margin-bottom: 20px;
 }
+
+input[type=text] {
+    margin-bottom: 20px;
+}
