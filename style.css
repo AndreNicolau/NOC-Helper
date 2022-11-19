@@ -1,0 +1,15 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 10px;
+}
+
+div {
+    display: grid;
+}
+
+input,
+select,
+textarea {
+    width: min-content;
+    margin-bottom: 10px;
+}
