@@ -10,11 +10,11 @@ div {
 select,
 textarea {
     width: min-content;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .mybtn {
-    width: min-content;
+    width: fit-content;
     margin: 10px 0px 10px 0px;
 }
 
