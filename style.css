@@ -13,8 +13,3 @@ textarea {
     width: min-content;
     margin-bottom: 20px;
 }
-
-input[type=text],
-textarea {
-    margin-bottom: 10px;
-}
