@@ -8,7 +8,6 @@ const select = document.getElementById("select");
 // variables
 let nomeTec;
 let contactoTec;
-let frase;
 
 function UpdateFrase() {
 	nomeTec = inpNomeTec.value;
