@@ -33,6 +33,7 @@ function Copiado() {
 	}, 500);
 }
 
+
 // inpCopiar event listener
 inpCopiar.addEventListener("click", () => {
 	UpdateFrase();
@@ -49,6 +50,7 @@ select.addEventListener("focus", () => {
 
 select.addEventListener("change", () => {
 	navigator.clipboard.writeText(select.value);
+	Copiado();
 });
 
 inpNomeTec.addEventListener("input", UpdateFrase);
