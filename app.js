@@ -21,7 +21,7 @@ function UpdateFrase() {
 	txtDescricao.value = frase;
 }
 
-// set inpCopiar text to "Copiado" for 0.5s
+// set inpCopiar value to "Copiado" for 0.5s
 function Copiado() {
 	inpCopiar.value = " Copiado ";
 	inpCopiar.className =
@@ -32,7 +32,6 @@ function Copiado() {
 			"bg-orange-500 rounded text-white font-bold w-min my-2";
 	}, 500);
 }
-
 
 // inpCopiar event listener
 inpCopiar.addEventListener("click", () => {
