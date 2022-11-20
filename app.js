@@ -17,8 +17,7 @@ function UpdateFrase() {
 	if (inpNomeTec.value == "") nomeTec = "*nome*";
 	if (inpContactoTec.value == "") contactoTec = "*contacto*";
 
-	frase = `Técnico ${nomeTec} (${contactoTec}) contactou e informa que `;
-	txtDescricao.value = frase;
+	txtDescricao.value = `Técnico ${nomeTec} (${contactoTec}) contactou e informa que `;
 }
 
 // set inpCopiar value to "Copiado" for 0.5s
@@ -36,16 +35,16 @@ function Copiado() {
 
 // inpCopiar event listener
 inpCopiar.addEventListener("click", () => {
-	UpdateFrase();
-	Copiado();
+	// copy txtDescricao to clipboard
+	navigator.clipboard.writeText(txtDescricao.value);
 
-	// copy to clipboard
-	navigator.clipboard.writeText(frase);
+	Copiado();
 });
 
 // copy select option text to clipboard on select changed
 select.addEventListener("focus", () => {
 	navigator.clipboard.writeText(select.value);
+	Copiado();
 });
 
 select.addEventListener("change", () => {
