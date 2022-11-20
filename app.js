@@ -21,9 +21,22 @@ function UpdateFrase() {
 	txtDescricao.value = frase;
 }
 
+// set inpCopiar text to "Copiado" for 0.5s
+function Copiado() {
+	inpCopiar.value = " Copiado ";
+	inpCopiar.className =
+		"bg-green-500 rounded text-white font-bold w-min my-2";
+	setTimeout(() => {
+		inpCopiar.value = " Copiar ";
+		inpCopiar.className =
+			"bg-orange-500 rounded text-white font-bold w-min my-2";
+	}, 500);
+}
+
 // inpCopiar event listener
 inpCopiar.addEventListener("click", () => {
 	UpdateFrase();
+	Copiado();
 
 	// copy to clipboard
 	navigator.clipboard.writeText(frase);
