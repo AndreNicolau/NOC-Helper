@@ -25,7 +25,7 @@ function UpdateFrase() {
 function Copiado() {
 	inpCopiar.value = " Copiado ";
 	inpCopiar.className =
-		"bg-green-500 rounded text-white font-bold w-min my-2";
+		"bg-green-700 rounded text-white font-bold w-min my-2";
 	setTimeout(() => {
 		inpCopiar.value = " Copiar ";
 		inpCopiar.className =
