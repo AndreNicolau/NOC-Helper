@@ -7,15 +7,16 @@ const select = document.getElementById("select");
 
 // SOS Telegram elements
 const modeTitle = document.getElementById("modeTitle");
-const inpDate = document.getElementById("date");
-const inpTicket = document.getElementById("ticket");
-const inpTroço = document.getElementById("troço");
-const inpIncidente = document.getElementById("incidente");
-const inpCausa = document.getElementById("causa");
-const inpSpoc = document.getElementById("spoc");
-const inpField = document.getElementById("field");
-const inpAfetação = document.getElementById("afetação");
-const inpPrevisão = document.getElementById("previsão");
+const inpDataInicio = document.getElementById("inpDataInicio");
+const inpNumeroTicket = document.getElementById("inpNumeroTicket");
+const inpinpTroçoCorte = document.getElementById("inpTroçoCorte");
+const inpIncidente = document.getElementById("inpIncidente");
+const inpCausa = document.getElementById("inpCausa");
+const inpSpoc = document.getElementById("inpSpoc");
+const inpField = document.getElementById("inpField");
+const inpAfetação = document.getElementById("inpAfetação");
+const inpPrevisão = document.getElementById("inpPrevisão");
+const equipaFibras = document.getElementById("equipaFibras");
 const inpFecho = document.getElementById("inpFecho");
 
 // radio elements
