@@ -31,7 +31,7 @@
         </textarea>
 
         <input type="button" value=" Copiar " id="inpCopiar"
-            class="bg-orange-500 rounded text-white font-bold w-min my-2">
+            class="bg-orange-500 rounded text-white font-bold w-fit my-2 p-1">
 
         <select name="select" id="select" class="bg-orange-500 text-white rounded mb-2 w-fit">
             <option value="Afetação dispersa.">Afetação dispersa.</option>
@@ -59,6 +59,27 @@
             e situações que afetem mais de 500 clientes.
         </p>
     </div>
+
+    <button class="bg-orange-500 rounded text-white font-bold w-fit m-2 p-1">
+
+        <label for="abertura" class="text-white">Abertura</label>
+        <input type="radio" name="tipo" id="abertura">
+
+    </button>
+
+    <button class="bg-orange-500 rounded text-white font-bold w-fit m-2 p-1">
+
+        <label for="update" class="text-white">Update</label>
+        <input type="radio" name="tipo" id="update">
+    </button>
+
+
+    <button class="bg-orange-500 rounded text-white font-bold w-fit m-2 p-1">
+
+        <label for="fecho" class="text-white">Fecho</label>
+        <input type="radio" name="tipo" id="fecho">
+
+    </button>
 
     <div class="flex">
         <div class="w-1/3 m-2 text-white ">
@@ -113,57 +134,11 @@
                         class="FECHO border-2 border-orange-500 rounded w-fit text-black">
 
                     <input type="button" value=" Copiar " id="inpCopiar"
-                        class="bg-orange-500 rounded text-white font-bold w-min my-2">
+                        class="bg-orange-500 rounded text-white font-bold w-fit my-2 p-1">
                 </span>
             </div>
         </div>
-
-        <div class="w-1/3 m-2 text-white ">
-            <div class="bg-blue-500 rounded p-2">
-                <h1 class="font-bold">
-                    ** Update **
-                </h1>
-                <p class="leading-6">
-                    Inicio: 16/10/2022 07:00 <br>
-                    Ticket: 9931981 <br>
-                    Corte Fibra: troço LEI-CMB <br>
-                    Incidente: Corte a 10Km sentido LEI-CMB <br>
-                    Equipa de fibras: no local <br>
-                    Causa: Vandalismo <br>
-                    Previsão: 2h00 para resolução. <br>
-                </p>
-            </div>
-        </div>
-
-        <div class="w-1/3 m-2 text-white ">
-            <div class="bg-blue-500 rounded p-2">
-                <h1 class="font-bold">
-                    ** Fecho **
-                </h1>
-                <p>
-                    Inicio: 16/10/2022 07:00 <br>
-                    Ticket: 9931981 <br>
-                    Fecho: 16/10/2022 11:00 <br>
-                    Corte Fibra: troço LEI-CMB <br>
-                    Incidente: <br>
-                    Causa Incidente: Vandalismo <br>
-                    Resolução: Provisória - Falta recolocar dois postes. Cabos no chão. <br>
-                </p>
-            </div>
-        </div>
-
     </div>
-
-
-    <label for="abertura" class="text-white">Abertura</label>
-    <input type="radio" name="tipo" id="abertura">
-
-    <label for="update" class="text-white">Update</label>
-    <input type="radio" name="tipo" id="update">
-
-    <label for="fecho" class="text-white">Fecho</label>
-    <input type="radio" name="tipo" id="fecho">
-
 
     <script src="/app.js"></script>
 </body>
