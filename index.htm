@@ -19,7 +19,7 @@
         }
     </style>
 
-    <div class="grid m-2 ">
+    <div class="grid m-2 w-1/4">
         <label for="inpNomeTec" class="text-white font-bold">Nome do técnico</label>
         <input type="text" name="inpNomeTec" id="inpNomeTec" class="border-2 border-orange-500 rounded w-fit">
 
@@ -49,7 +49,7 @@
     </div>
 
     <!-- SOS Telegram -->
-    <div class="bg-blue-500 text-white text-center rounded m-2 p-2">
+    <div class="bg-blue-500 text-white text-center rounded m-2 p-2 w-1/4">
         <h1 class="text-2xl font-bold">
             SoS Telegram
         </h1>
@@ -58,85 +58,75 @@
             cortes de fibra
             e situações que afetem mais de 500 clientes.
         </p>
+
+        <button class="bg-red-500 rounded text-white font-bold w-fit m-2 p-1">
+            <label for="abertura" class="text-white">Abertura</label>
+            <input type="radio" name="tipo" id="abertura">
+        </button>
+
+        <button class="bg-orange-500 rounded text-white font-bold w-fit m-2 p-1">
+            <label for="update" class="text-white">Update</label>
+            <input type="radio" name="tipo" id="update">
+        </button>
+
+
+        <button class="bg-green-500 rounded text-white font-bold w-fit m-2 p-1">
+            <label for="fecho" class="text-white">Fecho</label>
+            <input type="radio" name="tipo" id="fecho">
+        </button>
     </div>
 
-    <button class="bg-orange-500 rounded text-white font-bold w-fit m-2 p-1">
+    <div class="w-1/4 m-2 text-white flex">
+        <div class="bg-blue-500 rounded  p-2">
+            <h1 class="font-bold my-2" id="modeTitle">
+                ** Abertura **
+            </h1>
+            <span class="leading-4 grid">
+                <label for="inpDataInicio">Início</label>
+                <input type="datetime-local" id="inpDataInicio"
+                    class="border-2 border-orange-500 rounded w-fit text-black">
 
-        <label for="abertura" class="text-white">Abertura</label>
-        <input type="radio" name="tipo" id="abertura">
+                <label for="inpNumeroTicket">Ticket: </label>
+                <input type="text" id="inpNumeroTicket" class="border-2 border-orange-500 rounded w-fit text-black"
+                    placeholder="9999999">
 
-    </button>
+                <label for="inpTroçoCorte">Corte fibra (troço): </label>
+                <input type="text" id="inpTroçoCorte" class="border-2 border-orange-500 rounded w-fit text-black"
+                    placeholder="LEI-CMB">
 
-    <button class="bg-orange-500 rounded text-white font-bold w-fit m-2 p-1">
+                <label for="inpIncidente">Incidente: </label>
+                <input type="text" id="inpIncidente" class="border-2 border-orange-500 rounded w-fit text-black"
+                    placeholder="Corte a 10Km sentido LEI-CMB">
 
-        <label for="update" class="text-white">Update</label>
-        <input type="radio" name="tipo" id="update">
-    </button>
+                <label for="inpCausa">Causa:</label>
+                <input type="text" id="inpCausa" class="border-2 border-orange-500 rounded w-fit text-black"
+                    placeholder="Vandalismo">
 
+                <label for="inpSpoc" class="ABERTURA">SPOC:</label>
+                <input type="text" id="inpSpoc" class="ABERTURA border-2 border-orange-500 rounded w-fit text-black">
 
-    <button class="bg-orange-500 rounded text-white font-bold w-fit m-2 p-1">
+                <label for="inpField" class="ABERTURA">Field NOWO: </label>
+                <input type="text" id="inpField" class="ABERTURA border-2 border-orange-500 rounded w-fit text-black">
 
-        <label for="fecho" class="text-white">Fecho</label>
-        <input type="radio" name="tipo" id="fecho">
+                <label for="inpAfetação" class="ABERTURA">Afetação (nº clientes): </label>
+                <input type="text" id="inpAfetação" class="ABERTURA border-2 border-orange-500 rounded w-fit text-black"
+                    placeholder="S/A">
 
-    </button>
+                <label for="inpPrevisão" class="ABERTURA UPDATE">Previsão (em horas): </label>
+                <input type="text" id="inpPrevisão"
+                    class="ABERTURA UPDATE border-2 border-orange-500 rounded w-fit text-black"
+                    placeholder="S/ETR (estimativa de resolução)">
 
-    <div class="flex">
-        <div class="w-1/3 m-2 text-white ">
-            <div class="bg-blue-500 rounded p-2">
-                <h1 class="font-bold" id="modeTitle">
-                    ** Abertura **
-                </h1>
-                <span class="leading-4 grid w-fit">
-                    <label for="inpDataInicio">Início</label>
-                    <input type="datetime-local" id="inpDataInicio"
-                        class="border-2 border-orange-500 rounded w-fit text-black">
+                <label for="equipaFibras" class="UPDATE">Equipa de fibras:</label>
+                <input type="text" id="equipaFibras" class="UPDATE border-2 border-orange-500 rounded w-fit text-black">
 
-                    <label for="inpNumeroTicket">Ticket: </label>
-                    <input type="text" id="inpNumeroTicket" class="border-2 border-orange-500 rounded w-fit text-black"
-                        placeholder="9999999">
+                <label for="inpFecho" class="FECHO">Fecho</label>
+                <input type="datetime-local" id="inpFecho"
+                    class="FECHO border-2 border-orange-500 rounded w-fit text-black">
 
-                    <label for="inpTroçoCorte">Corte fibra (troço): </label>
-                    <input type="text" id="inpTroçoCorte" class="border-2 border-orange-500 rounded w-fit text-black"
-                        placeholder="LEI-CMB">
-
-                    <label for="inpIncidente">Incidente: </label>
-                    <input type="text" id="inpIncidente" class="border-2 border-orange-500 rounded w-fit text-black"
-                        placeholder="Corte a 10Km sentido LEI-CMB">
-
-                    <label for="inpCausa">Causa:</label>
-                    <input type="text" id="inpCausa" class="border-2 border-orange-500 rounded w-fit text-black"
-                        placeholder="Vandalismo">
-
-                    <label for="inpSpoc" class="ABERTURA">SPOC:</label>
-                    <input type="text" id="inpSpoc"
-                        class="ABERTURA border-2 border-orange-500 rounded w-fit text-black">
-
-                    <label for="inpField" class="ABERTURA">Field NOWO: </label>
-                    <input type="text" id="inpField"
-                        class="ABERTURA border-2 border-orange-500 rounded w-fit text-black">
-
-                    <label for="inpAfetação" class="ABERTURA">Afetação (nº clientes): </label>
-                    <input type="text" id="inpAfetação"
-                        class="ABERTURA border-2 border-orange-500 rounded w-fit text-black" placeholder="S/A">
-
-                    <label for="inpPrevisão" class="ABERTURA UPDATE">Previsão (em horas): </label>
-                    <input type="text" id="inpPrevisão"
-                        class="ABERTURA UPDATE border-2 border-orange-500 rounded w-fit text-black"
-                        placeholder="S/ETR (estimativa de resolução)">
-
-                    <label for="equipaFibras" class="UPDATE">Equipa de fibras:</label>
-                    <input type="text" id="equipaFibras"
-                        class="UPDATE border-2 border-orange-500 rounded w-fit text-black">
-
-                    <label for="inpFecho" class="FECHO">Fecho</label>
-                    <input type="datetime-local" id="inpFecho"
-                        class="FECHO border-2 border-orange-500 rounded w-fit text-black">
-
-                    <input type="button" value=" Copiar " id="inpCopiar"
-                        class="bg-orange-500 rounded text-white font-bold w-fit my-2 p-1">
-                </span>
-            </div>
+                <input type="button" value=" Copiar " id="inpCopiar"
+                    class="bg-orange-500 rounded text-white font-bold w-fit my-2 p-1">
+            </span>
         </div>
     </div>
 

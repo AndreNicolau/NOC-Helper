@@ -111,6 +111,7 @@ function TelegramMessageMode() {
 	}
 }
 
+
 function UpdateFrase() {
 	nomeTec = inpNomeTec.value;
 	contactoTec = inpContactoTec.value;
