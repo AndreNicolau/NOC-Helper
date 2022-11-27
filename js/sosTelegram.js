@@ -2,7 +2,7 @@
 const modeTitle = document.getElementById("modeTitle");
 const inpDataInicio = document.getElementById("inpDataInicio");
 const inpNumeroTicket = document.getElementById("inpNumeroTicket");
-const inpinpTroçoCorte = document.getElementById("inpTroçoCorte");
+const inpinpTroçoCorte = document.getElementById("inpTroço");
 const inpIncidente = document.getElementById("inpIncidente");
 const inpCausa = document.getElementById("inpCausa");
 const inpSpoc = document.getElementById("inpSpoc");
@@ -13,9 +13,9 @@ const equipaFibras = document.getElementById("equipaFibras");
 const inpFecho = document.getElementById("inpFecho");
 
 // radio elements
-const abertura = document.getElementById("abertura");
-const update = document.getElementById("update");
-const fecho = document.getElementById("fecho");
+const abertura = document.getElementById("rdoAbertura");
+const update = document.getElementById("rdoUpdate");
+const fecho = document.getElementById("rdoFecho");
 
 // SOS Telegram variables
 let data;

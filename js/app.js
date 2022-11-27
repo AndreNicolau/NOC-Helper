@@ -1,8 +1,8 @@
 // get elements
-const inpNomeTec = document.getElementById("inpNomeTec");
-const inpContactoTec = document.getElementById("inpContactoTec");
-const txtDescricao = document.getElementById("txtDescricao");
-const inpCopiar = document.getElementById("inpCopiar");
+const inpNomeTec = document.getElementById("inpNomeTecnico");
+const inpContactoTec = document.getElementById("inpContactoTecnico");
+const txtDescricao = document.getElementById("txtDescrição");
+const btnCopiar = document.getElementById("btnCopiar");
 const select = document.getElementById("select");
 
 // variables
@@ -16,24 +16,30 @@ function UpdateFrase() {
 	if (inpNomeTec.value == "") nomeTec = "*nome*";
 	if (inpContactoTec.value == "") contactoTec = "*contacto*";
 
-	txtDescricao.value = `Técnico ${nomeTec} (${contactoTec}) contactou e informa que `;
+	txtDescricao.value = `Técnico ${nomeTec} (${contactoTec}) contacta e informa que `;
 }
 
 // set inpCopiar value to "Copiado" for 0.5s
 function Copiado() {
-	inpCopiar.value = " Copiado ";
-	inpCopiar.className =
-		"bg-green-700 rounded text-white font-bold w-min my-2";
+	btnCopiar.value = " Copiado ";
+	btnCopiar.className = "btn fw-bold btn-success w-75 align-self-center";
 
 	setTimeout(() => {
-		inpCopiar.value = " Copiar ";
-		inpCopiar.className =
-			"bg-orange-500 rounded text-white font-bold w-min my-2";
+		btnCopiar.value = " Copiar ";
+		btnCopiar.className = "btn fw-bold btn-primary w-75 align-self-center";
+	}, 500);
+}
+
+function SelectCopied() {
+	select.className = "form-select text-white bg-success my-3 w-75 align-self-center";
+
+	setTimeout(() => {
+		select.className = "form-select text-white bg-primary my-3 w-75 align-self-center";
 	}, 500);
 }
 
 // inpCopiar event listener
-inpCopiar.addEventListener("click", () => {
+btnCopiar.addEventListener("click", () => {
 	// copy txtDescricao to clipboard
 	navigator.clipboard.writeText(txtDescricao.value);
 
@@ -43,14 +49,13 @@ inpCopiar.addEventListener("click", () => {
 // copy select option text to clipboard on select changed
 select.addEventListener("focus", () => {
 	navigator.clipboard.writeText(select.value);
-	Copiado();
+	SelectCopied();
 });
 
 select.addEventListener("change", () => {
 	navigator.clipboard.writeText(select.value);
-	Copiado();
+	SelectCopied();
 });
 
 inpNomeTec.addEventListener("input", UpdateFrase);
 inpContactoTec.addEventListener("input", UpdateFrase);
-
