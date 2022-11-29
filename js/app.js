@@ -1,4 +1,4 @@
-// DOCUMENT ELEMENTS 
+// DOCUMENT ELEMENTS
 const inpNomeTec = document.getElementById("inpNomeTecnico");
 const inpContactoTec = document.getElementById("inpContactoTecnico");
 const txtDescricao = document.getElementById("txtDescrição");
@@ -31,10 +31,12 @@ function Copiado() {
 }
 
 function SelectCopied() {
-	select.className = "form-select text-white bg-success my-3 w-75 align-self-center";
+	select.className =
+		"form-select text-white bg-success my-3 w-75 align-self-center";
 
 	setTimeout(() => {
-		select.className = "form-select text-white bg-primary my-3 w-75 align-self-center";
+		select.className =
+			"form-select text-white bg-primary my-3 w-75 align-self-center";
 	}, 500);
 }
 
