@@ -46,7 +46,6 @@ btnCopiar.addEventListener("click", () => {
 	Copiado();
 });
 
-
 select.addEventListener("focus", () => {
 	navigator.clipboard.writeText(select.value);
 	SelectCopied();
