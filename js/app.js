@@ -17,7 +17,7 @@ function UpdateFrase() {
 	if (inpNomeTec.value == "") nomeTec = "*nome*";
 	if (inpContactoTec.value == "") contactoTec = "*contacto*";
 
-	txtDescricao.value = `Técnico ${nomeTec} (${contactoTec}) contacta e informa que `;
+	txtDescricao.value = `Técnico ${nomeTec.trim()} (${contactoTec.trim()}) contacta e informa que `;
 }
 
 function Copiado() {
