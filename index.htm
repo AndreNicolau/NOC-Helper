@@ -42,7 +42,7 @@
 
     <!-- Helper -->
     <div id="accordion">
-        <div id="helperNoc" data-bs-parent="#accordion" class="collapse show" style="margin-top: 80px;">
+        <div id="helperNoc" data-bs-parent="#accordion" class="collapse" style="margin-top: 80px;">
             <div class="container-sm d-flex flex-column">
 
                 <form class="form-floating text-dark mb-2 w-75 align-self-center">
@@ -76,7 +76,7 @@
         </div>
 
         <!-- SOS TELEGRAM -->
-        <div id="sosTelegram" data-bs-parent="#accordion" class="collapse" style="margin-top: 80px;">
+        <div id="sosTelegram" data-bs-parent="#accordion" class="collapse show" style="margin-top: 80px;">
             <div class="container-sm p-2 bg-telegram rounded text-center w-75">
                 <h1 class="fw-bold">SOS TELEGRAM</h1>
                 <p>(Exemplo preenchido com corte de fibra, podem ser outras situações) Enviar sempre templates em todos
@@ -102,64 +102,71 @@
 
             <div
                 class="container-sm p-2 my-2 bg-telegram w-75 rounded text-center d-flex flex-column justify-content-center align-items-center">
-                <h3 id="modeTitle">** Abertura **</h3>
+                <div class="container-sm d-flex">
+                    <div class="container-sm">
 
-                <form class="form-floating text-dark my-1 w-50">
-                    <input type="datetime-local" id="inpDataInicio" class="form-control ">
-                    <label for="inpDataInicio">Início</label>
-                </form>
+                        <h3 id="modeTitle">** Abertura **</h3>
 
-                <form class="form-floating text-dark my-1 w-50">
-                    <input type="text" id="inpNumeroTicket" class="form-control">
-                    <label for="inpNumeroTicket">Ticket</label>
-                </form>
+                        <form class="form-floating text-dark my-1">
+                            <input type="datetime-local" name="SOSinput" id="inpDataInicio" class="form-control ">
+                            <label for="inpDataInicio">Início</label>
+                        </form>
 
-                <form class="form-floating text-dark my-1 w-50">
-                    <input type="text" id="inpTroço" class="form-control">
-                    <label for="inpTroço">Troço</label>
-                </form>
+                        <form class="form-floating text-dark">
+                            <input type="text" name="SOSinput" id="inpNumeroTicket" class="form-control">
+                            <label for="inpNumeroTicket">Ticket</label>
+                        </form>
 
-                <form class="form-floating text-dark my-1 w-50">
-                    <input type="text" id="inpIncidente" class="form-control">
-                    <label for="inpIncidente">Incidente</label>
-                </form>
+                        <form class="form-floating text-dark my-1">
+                            <input type="text" name="SOSinput" id="inpTroço" class="form-control">
+                            <label for="inpTroço">Troço</label>
+                        </form>
 
-                <form class="form-floating text-dark my-1 w-50">
-                    <input type="text" id="inpCausa" class="form-control">
-                    <label for="inpCausa">Causa</label>
-                </form>
+                        <form class="form-floating text-dark my-1">
+                            <input type="text" name="SOSinput" id="inpIncidente" class="form-control">
+                            <label for="inpIncidente">Incidente</label>
+                        </form>
 
-                <form class="ABERTURA form-floating text-dark my-1 w-50">
-                    <input type="text" id="inpSpoc" class="form-control">
-                    <label for="inpSpoc">SPOC</label>
-                </form>
+                        <form class="form-floating text-dark my-1">
+                            <input type="text" name="SOSinput" id="inpCausa" class="form-control">
+                            <label for="inpCausa">Causa</label>
+                        </form>
 
-                <form class="ABERTURA form-floating text-dark my-1 w-50">
-                    <input type="text" id="inpField" class="form-control">
-                    <label for="inpField">Field NOWO</label>
-                </form>
+                        <form class="ABERTURA form-floating text-dark my-1">
+                            <input type="text" name="SOSinput" id="inpSpoc" class="form-control">
+                            <label for="inpSpoc">SPOC</label>
+                        </form>
 
-                <form class="ABERTURA form-floating text-dark my-1 w-50">
-                    <input type="text" id="inpAfetação" class="form-control">
-                    <label for="inpAfetação">Afetação (nº de clientes)</label>
-                </form>
+                        <form class="ABERTURA form-floating text-dark my-1">
+                            <input type="text" name="SOSinput" id="inpField" class="form-control">
+                            <label for="inpField">Field NOWO</label>
+                        </form>
 
-                <form class="ABERTURA UPDATE form-floating text-dark my-1 w-50">
-                    <input type="text" id="inpPrevisão" class="form-control">
-                    <label for="inpPrevisão">Previsão de resolução (em horas)</label>
-                </form>
+                        <form class="ABERTURA form-floating text-dark my-1">
+                            <input type="text" name="SOSinput" id="inpAfetação" class="form-control">
+                            <label for="inpAfetação">Afetação (nº de clientes)</label>
+                        </form>
 
-                <form class="UPDATE form-floating text-dark my-1 w-50">
-                    <input type="text" id="inpEquipaFibras" class="form-control">
-                    <label for="inpEquipaFibras">Equipa de Fibras</label>
-                </form>
+                        <form class="ABERTURA UPDATE form-floating text-dark my-1">
+                            <input type="text" name="SOSinput" id="inpPrevisão" class="form-control">
+                            <label for="inpPrevisão">Previsão de resolução (em horas)</label>
+                        </form>
 
-                <form class="FECHO form-floating text-dark my-1 w-50">
-                    <input type="datetime-local" id="inpDataFecho" class="form-control">
-                    <label for="inpDataFecho">Fecho</label>
-                </form>
+                        <form class="UPDATE form-floating text-dark my-1">
+                            <input type="text" name="SOSinput" id="inpEquipaFibras" class="form-control">
+                            <label for="inpEquipaFibras">Equipa de Fibras</label>
+                        </form>
 
-                <button class="btn btn-primary w-50">Copiar</button>
+                        <form class="FECHO form-floating text-dark my-1">
+                            <input type="datetime-local" name="SOSinput" id="inpDataFecho" class="form-control">
+                            <label for="inpDataFecho">Fecho</label>
+                        </form>
+                    </div>
+                    <div class="container-sm">
+                        <textarea name="" id="txtMensagemSOS" cols="30" rows="10" class="w-100 mt-5"></textarea>
+                    </div>
+                </div>
+                <button id="sosTelegram_btnCopiar" class="btn btn-primary w-50">Copiar</button>
             </div>
         </div>
 
