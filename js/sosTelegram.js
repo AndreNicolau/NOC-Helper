@@ -1,16 +1,6 @@
 // SOS Telegram elements
 const tituloModoDeEnvio = document.getElementById("tituloModoDeEnvio");
-const inpDataInicio = document.getElementById("inpDataInicio");
-const inpNumeroTicket = document.getElementById("inpNumeroTicket");
-const inpTroçoCorte = document.getElementById("inpTroço");
-const inpIncidente = document.getElementById("inpIncidente");
-const inpCausa = document.getElementById("inpCausa");
-const inpSpoc = document.getElementById("inpSpoc");
-const inpField = document.getElementById("inpField");
-const inpAfetação = document.getElementById("inpAfetação");
-const inpPrevisão = document.getElementById("inpPrevisão");
 const equipaFibras = document.getElementById("equipaFibras");
-const inpDataFecho = document.getElementById("inpDataFecho");
 const txtMensagemSOS = document.getElementById("txtMensagemSOS");
 const btnCopiarSOS = document.getElementById("sosTelegram_btnCopiar");
 
@@ -23,15 +13,16 @@ const update = document.getElementById("rdoUpdate");
 const fecho = document.getElementById("rdoFecho");
 
 // SOS Telegram variables
-let data;
-let ticketNumber;
-let trocoName;
-let incidenteName;
-let causaName;
-let spocName;
-let fieldName;
-let afetaçãoName;
-let previsãoName;
+const dataAbertura = document.getElementById("inpDataAbertura");
+const numeroTicket = document.getElementById("inpNumeroTicket");
+const nomeTroço = document.getElementById("inpTroço");
+const nomeIncidente = document.getElementById("inpIncidente");
+const nomeCausa = document.getElementById("inpCausa");
+const nomeSpoc = document.getElementById("inpSpoc");
+const nomeField = document.getElementById("inpField");
+const nomeAfetação = document.getElementById("inpAfetação");
+const nomePrevisão = document.getElementById("inpPrevisão");
+const dataFecho = document.getElementById("inpDataFecho");
 
 // get elements by classname "ABERTURA"
 const aberturaElements = document.getElementsByClassName("ABERTURA");
@@ -105,17 +96,8 @@ function TelegramMessageMode() {
 }
 
 function UpdateMessage() {
-	data = inpDataInicio.value;
-	ticketNumber = inpNumeroTicket.value;
-	trocoName = inpTroçoCorte.value;
-	incidenteName = inpIncidente.value;
-	causaName = inpCausa.value;
-	spocName = inpSpoc.value;
-	fieldName = inpField.value;
-	afetaçãoName = inpAfetação.value;
-	previsãoName = inpPrevisão.value;
 
-	const mensagem = `Data: ${data}\nTicket: ${ticketNumber}\nTroço: ${trocoName}\nIncidente: ${incidenteName}\nCausa: ${causaName}\nSPOC: ${spocName}\nField: ${fieldName}\nAfetação: ${afetaçãoName}\nPrevisão: ${previsãoName}`;
+	const mensagem = `Data: ${dataAbertura.value.replaceAll("T", " ")}\nTicket: ${numeroTicket.value}\nTroço: ${nomeTroço.value}\nIncidente: ${nomeIncidente.value}\nCausa: ${nomeCausa.value}\nSPOC: ${nomeSpoc.value}\nField: ${nomeField.value}\nAfetação: ${nomeAfetação}\nPrevisão: ${nomePrevisão.value}`;
 	txtMensagemSOS.value = mensagem.trim();
 }
 
