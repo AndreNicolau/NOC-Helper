@@ -24,11 +24,11 @@ const nomeAfetação = document.getElementById("inpAfetação");
 const nomePrevisão = document.getElementById("inpPrevisão");
 const dataFecho = document.getElementById("inpDataFecho");
 
-// get elements by classname "ABERTURA"
+// get elements by className "ABERTURA"
 const aberturaElements = document.getElementsByClassName("ABERTURA");
-// get elements by classname "UPDATE"
+// get elements by className "UPDATE"
 const updateElements = document.getElementsByClassName("UPDATE");
-// get elements by classname "FECHO"
+// get elements by className "FECHO"
 const fechoElements = document.getElementsByClassName("FECHO");
 
 // page load
