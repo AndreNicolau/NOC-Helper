@@ -1,5 +1,5 @@
 // SOS Telegram elements
-const modeTitle = document.getElementById("modeTitle");
+const tituloModoDeEnvio = document.getElementById("tituloModoDeEnvio");
 const inpDataInicio = document.getElementById("inpDataInicio");
 const inpNumeroTicket = document.getElementById("inpNumeroTicket");
 const inpTroçoCorte = document.getElementById("inpTroço");
@@ -10,12 +10,12 @@ const inpField = document.getElementById("inpField");
 const inpAfetação = document.getElementById("inpAfetação");
 const inpPrevisão = document.getElementById("inpPrevisão");
 const equipaFibras = document.getElementById("equipaFibras");
-const inpFecho = document.getElementById("inpFecho");
+const inpDataFecho = document.getElementById("inpDataFecho");
 const txtMensagemSOS = document.getElementById("txtMensagemSOS");
 const btnCopiarSOS = document.getElementById("sosTelegram_btnCopiar");
 
-// get elements by classname "SOSinput"
-const sosInputs = document.getElementsByClassName("SOSinput");
+// get elements by name "SOSinput"
+const sosInputs = document.getElementsByName("SOSinput");
 
 // radio elements
 const abertura = document.getElementById("rdoAbertura");
@@ -52,12 +52,11 @@ window.onload = () => {
 	for (var i = 0; i < fechoElements.length; i++) {
 		fechoElements[i].style.display = "none";
 	}
-
 };
 
 function TelegramMessageMode() {
 	if (abertura.checked) {
-		modeTitle.innerHTML = "** Abertura **";
+		tituloModoDeEnvio.innerHTML = "** Abertura **";
 
 		for (var i = 0; i < aberturaElements.length; i++) {
 			aberturaElements[i].style.display = "block";
@@ -73,7 +72,7 @@ function TelegramMessageMode() {
 	}
 
 	if (update.checked) {
-		modeTitle.innerHTML = "** Update **";
+		tituloModoDeEnvio.innerHTML = "** Update **";
 
 		for (var i = 0; i < aberturaElements.length; i++) {
 			aberturaElements[i].style.display = "none";
@@ -89,7 +88,7 @@ function TelegramMessageMode() {
 	}
 
 	if (fecho.checked) {
-		modeTitle.innerHTML = "** Fecho **";
+		tituloModoDeEnvio.innerHTML = "** Fecho **";
 
 		for (var i = 0; i < aberturaElements.length; i++) {
 			aberturaElements[i].style.display = "none";
@@ -115,6 +114,9 @@ function UpdateMessage() {
 	fieldName = inpField.value;
 	afetaçãoName = inpAfetação.value;
 	previsãoName = inpPrevisão.value;
+
+	const mensagem = `Data: ${data}\nTicket: ${ticketNumber}\nTroço: ${trocoName}\nIncidente: ${incidenteName}\nCausa: ${causaName}\nSPOC: ${spocName}\nField: ${fieldName}\nAfetação: ${afetaçãoName}\nPrevisão: ${previsãoName}`;
+	txtMensagemSOS.value = mensagem.trim();
 }
 
 // radio event listeners
@@ -123,9 +125,9 @@ update.addEventListener("click", TelegramMessageMode);
 fecho.addEventListener("click", TelegramMessageMode);
 
 // button event listener
-btnCopiarSOS.addEventListener("click", Copiar);
+btnCopiarSOS.addEventListener("click", UpdateMessage);
 
 // sosInputs event listener
 for (var i = 0; i < sosInputs.length; i++) {
-	sosInputs[i].addEventListener("change", UpdateMessage);
+	sosInputs[i].addEventListener("input", UpdateMessage);
 }
