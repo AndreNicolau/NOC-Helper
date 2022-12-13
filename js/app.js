@@ -1,9 +1,31 @@
 // DOCUMENT ELEMENTS
 const inpNomeTec = document.getElementById("inpNomeTecnico");
+inpNomeTec.addEventListener("input", UpdateFrase);
+
 const inpContactoTec = document.getElementById("inpContactoTecnico");
-const txtDescricao = document.getElementById("txtDescrição");
+inpContactoTec.addEventListener("input", UpdateFrase);
+
 const btnCopiar = document.getElementById("btnCopiar");
+btnCopiar.addEventListener("click", () => {
+	// copy txtDescricao to clipboard
+	navigator.clipboard.writeText(txtDescricao.value);
+	
+	Copiado();
+});
+
 const select = document.getElementById("select");
+select.addEventListener("focus", () => {
+	navigator.clipboard.writeText(select.value);
+	SelectCopied();
+});
+
+select.addEventListener("change", () => {
+	navigator.clipboard.writeText(select.value);
+	SelectCopied();
+});
+
+
+const txtDescricao = document.getElementById("txtDescrição");
 
 // VARIABLES
 let nomeTec;
@@ -40,23 +62,18 @@ function SelectCopied() {
 	}, 500);
 }
 
-// EVENT LISTENERS
-btnCopiar.addEventListener("click", () => {
-	// copy txtDescricao to clipboard
-	navigator.clipboard.writeText(txtDescricao.value);
 
-	Copiado();
-});
 
-select.addEventListener("focus", () => {
-	navigator.clipboard.writeText(select.value);
-	SelectCopied();
-});
 
-select.addEventListener("change", () => {
-	navigator.clipboard.writeText(select.value);
-	SelectCopied();
-});
 
-inpNomeTec.addEventListener("input", UpdateFrase);
-inpContactoTec.addEventListener("input", UpdateFrase);
+// get elements by class name "dropdown-item"
+const dropdownItems = document.getElementsByClassName("dropdown-item");
+// add event listener for all dropdownItems
+for (let i = 0; i < dropdownItems.length; i++) {
+	dropdownItems[i].addEventListener("click", () => {
+		// get the value of the dropdown item
+		let value = dropdownItems[i].innerHTML;
+		// copy the value to clipboard
+		navigator.clipboard.writeText(value.trim());
+	});
+}

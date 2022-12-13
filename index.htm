@@ -10,7 +10,7 @@
     <!-- Link to bootstrap css folder -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <!-- Link to bootstrap js folder -->
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body class="bg-dark text-white">
@@ -42,7 +42,7 @@
 
     <!-- Helper -->
     <div id="accordion">
-        <div id="helperNoc" data-bs-parent="#accordion" class="collapse" style="margin-top: 80px;">
+        <div id="helperNoc" data-bs-parent="#accordion" class="collapse show" style="margin-top: 80px;">
             <div class="container-sm d-flex flex-column">
 
                 <form class="form-floating text-dark mb-2 w-75 align-self-center">
@@ -72,11 +72,50 @@
                     <option value="Tentativa de contacto sem sucesso SPOC CME xxx.">Tentativa de contacto sem sucesso
                         SPOC CME xxx.</option>
                 </select>
+
+                <div class="btn-group align-self-center" role="group" aria-label="teste">
+
+                    <div class="btn-group" role="group">
+                        <button id="buttonAlarmesGroup" type="button" class="btn btn-primary dropdown-toggle"
+                            data-bs-toggle="dropdown" aria-expanded="false">Alarmes</button>
+
+                        <ul class="dropdown-menu" aria-labelledby="buttonAlarmesGroup">
+                            <li><a href="#" class="dropdown-item"> Afetação dispersa. </a></li>
+                            <li><a href="#" class="dropdown-item"> Em análise. </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-group" role="group">
+
+                        <button id="buttonSpocGroup" type="button" data-bs-toggle="dropdown"
+                            class="btn btn-primary dropdown-toggle">SPOC</button>
+
+                        <ul class="dropdown-menu" aria-labelledby="buttonSpocGroup">
+                            <li>
+                                <a href="#" class="dropdown-item">SPOC ZENER contactado e informado.</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">SPOC CME contactado e informado.</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">Tentativa de contacto sem sucesso SPOC ZENER
+                                    (contacto).
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">Tentativa de contacto sem sucesso SPOC CME
+                                    (contacto).</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
             </div>
         </div>
 
         <!-- SOS TELEGRAM -->
-        <div id="sosTelegram" data-bs-parent="#accordion" class="collapse show" style="margin-top: 80px;">
+        <div id="sosTelegram" data-bs-parent="#accordion" class="collapse" style="margin-top: 80px;">
             <div class="container-sm p-2 bg-telegram rounded text-center w-75">
                 <h1 class="fw-bold">SOS TELEGRAM</h1>
                 <p>(Exemplo preenchido com corte de fibra, podem ser outras situações) Enviar sempre templates em todos
