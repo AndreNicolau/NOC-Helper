@@ -69,23 +69,49 @@
                             data-bs-toggle="dropdown" aria-expanded="false">Alarmes</button>
 
                         <ul class="dropdown-menu" aria-labelledby="buttonAlarmesGroup">
-                            <li><a href="#" class="dropdown-item"> Afetação dispersa. </a></li>
-                            <li><a href="#" class="dropdown-item"> Em análise. </a></li>
+                            <li><a href="#" class="ALARMES dropdown-item"> Afetação dispersa. </a></li>
+                            <li><a href="#" class="ALARMES dropdown-item"> Em análise. </a></li>
                         </ul>
                     </div>
-
-
                 </div>
 
                 <div class="btn-group my-3 align-self-center" role="group">
-                    <button class="btn btn-primary">
-                        <input type="radio" name="empreiteira" id="inpZENER" value="ZENER" checked>
-                        <label for="inpZENER">ZENER</label>
-                    </button>
-                    <button class="btn btn-primary">
-                        <input type="radio" name="empreiteira" id="inpCME" value="CME">
-                        <label for="inpCME">CME</label>
-                    </button>
+                    <div class="btn-group" role="group">
+                        <button id="buttonSpocGroup" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">ZENER</button>
+
+                        <ul class="dropdown-menu" aria-labelledby="buttonSpocGroup">
+                            <li class="dropdown-item">
+                                <input type="radio" name="ZONE" id="spocPalmela" value="Palmela/Lisboa" class="ZONE" checked>
+                                <label for="spocPalmela">Palmela/Lisboa</label>
+                            </li>
+                            <li class="dropdown-item">
+                                <input type="radio" name="ZONE" id="spocCaldas" value="Caldas da Rainha" class="ZONE">
+                                <label for="spocCaldas">Caldas da Rainha</label>
+                            </li>
+                            <li class="dropdown-item">
+                                <input type="radio" name="ZONE" id="spocAlgarve" value="Algarve" class="ZONE">
+                                <label for="spocAlgarve">Algarve</label>
+                            </li>
+                            <li class="dropdown-item">
+                                <input type="radio" name="ZONE" id="spocElvas" value="Elvas/Portalegre" class="ZONE">
+                                <label for="spocElvas">Elvas/Portalegre</label>
+                            </li>
+                            <li class="dropdown-item">
+                                <input type="radio" name="ZONE" id="spocEvora" value="Évora/Beja" class="ZONE">
+                                <label for="spocEvora">Évora/Beja</label>
+                            </li>
+                            <li class="dropdown-item">
+                                <input type="radio" name="ZONE" id="spocAlcacer" value="Alcácer/St André" class="ZONE">
+                                <label for="spocAlcacer">Alcácer/St André</label>
+                            </li>
+                        </ul>
+                        <button class="btn btn-primary">
+                            <input type="radio" name="company" id="inpCME" value="CME">
+                            <label for="inpCME">CME</label>
+                        </button>
+                    </div>
+
                     <div class="btn-group" role="group">
 
                         <button id="buttonSpocGroup" type="button" data-bs-toggle="dropdown"
@@ -93,13 +119,12 @@
 
                         <ul class="dropdown-menu" aria-labelledby="buttonSpocGroup">
                             <li>
-                                <a href="#" class="dropdown-item" id="spocSuccess"> </a>
+                                <a href="#" class="SPOC dropdown-item" id="spocSuccess"> </a>
                             </li>
                             <li>
-                                <a href="#" class="dropdown-item" id="spocUnsuccessful"> </a>
+                                <a href="#" class="SPOC dropdown-item" id="spocUnsuccessful"> </a>
                             </li>
                         </ul>
-
                     </div>
                 </div>
             </div>
@@ -324,9 +349,24 @@
                             </tr>
                             <tr>
                                 <td rowspan="26">Level 2</td>
+
+                                <td rowspan="7">Zener - sectores</td>
+                                <td>Palmela/Lisboa</td>
+                                <td colspan="2">928043168</td>
+                            </tr>
+                            <tr>
+                                <td class="text-warning fw-bold">
+                                    Provisório Palmela/Lisboa
+                                </td>
+                                <td colspan="2" class="text-warning">
+                                    Paulo Macedo 965734891
+                                </td>
+                             </tr>
+
                                 <td rowspan="6">Zener - sectores</td>
                                 <td>Palmela / Lisboa</td>
                                 <td colspan="2" class="text-warning fw-bold">Provisório Vítor Santos 928098494</td>
+
                             </tr>
                             <tr>
                                 <td>Caldas da Rainha</td>
@@ -337,9 +377,20 @@
                                 <td colspan="2">928034863</td>
                             </tr>
                             <tr>
-                                <td>Elvas / Portalegre</td>
+                                <td>Elvas/Portalegre</td>
                                 <td colspan="2">928032839</td>
                             </tr>
+                            <tr>
+
+                            <tr>
+                                <td>Évora/Beja</td>
+                                <td colspan="2">928034032</td>
+                            </tr>
+                            <tr>
+                                <td>Alcácer/St André</td>
+                                <td colspan="2">928032839</td>
+                            </tr>
+
                             <tr>
                                 <td>Évora / Beja</td>
                                 <td colspan="2" class="text-warning fw-bold">Provisório Paulo Matos 928070260</td>
@@ -348,6 +399,7 @@
                                 <td>Alcácer / St André</td>
                                 <td colspan="2">Provisório Paulo Matos 928070260</td>
                             </tr>
+
                             <tr>
                                 <td rowspan="2">SPOC - ZENER</td>
                                 <td>2ª linha (ligar se sectores não atende)</td>
