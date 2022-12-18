@@ -60,18 +60,7 @@
                 <textarea id="txtDescrição" cols="30" rows="10"
                     class="mb-2 rounded border border-primary border-2 w-75 align-self-center">Técnico *nome* (*contacto*) contacta e informa que </textarea>
 
-                <button id="btnCopiar" class="btn fw-bold btn-primary w-75 align-self-center">Copiar</button>
-
-                <select id="select" class="form-select text-white bg-primary my-3 w-75 align-self-center">
-                    <option value="Afetação dispersa.">Afetação dispersa.</option>
-                    <option value="Em análise.">Em análise.</option>
-                    <option value="SPOC ZENER contactado e informado.">SPOC ZENER contactado e informado.</option>
-                    <option value="SPOC CME contactado e informado.">SPOC CME contactado e informado.</option>
-                    <option value="Tentativa de contacto sem sucesso SPOC ZENER xxx.">Tentativa de contacto sem sucesso
-                        SPOC ZENER xxx.</option>
-                    <option value="Tentativa de contacto sem sucesso SPOC CME xxx.">Tentativa de contacto sem sucesso
-                        SPOC CME xxx.</option>
-                </select>
+                <button id="btnCopiar" class="btn fw-bold btn-primary mb-3 w-75 align-self-center">Copiar</button>
 
                 <div class="btn-group align-self-center" role="group" aria-label="teste">
 
@@ -85,6 +74,18 @@
                         </ul>
                     </div>
 
+
+                </div>
+
+                <div class="btn-group my-3 align-self-center" role="group">
+                    <button class="btn btn-primary">
+                        <input type="radio" name="empreiteira" id="inpZENER" value="ZENER" checked>
+                        <label for="inpZENER">ZENER</label>
+                    </button>
+                    <button class="btn btn-primary">
+                        <input type="radio" name="empreiteira" id="inpCME" value="CME">
+                        <label for="inpCME">CME</label>
+                    </button>
                     <div class="btn-group" role="group">
 
                         <button id="buttonSpocGroup" type="button" data-bs-toggle="dropdown"
@@ -92,24 +93,14 @@
 
                         <ul class="dropdown-menu" aria-labelledby="buttonSpocGroup">
                             <li>
-                                <a href="#" class="dropdown-item">SPOC ZENER contactado e informado.</a>
+                                <a href="#" class="dropdown-item" id="spocSuccess"> </a>
                             </li>
                             <li>
-                                <a href="#" class="dropdown-item">SPOC CME contactado e informado.</a>
-                            </li>
-                            <li>
-                                <a href="#" class="dropdown-item">Tentativa de contacto sem sucesso SPOC ZENER
-                                    (contacto).
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="dropdown-item">Tentativa de contacto sem sucesso SPOC CME
-                                    (contacto).</a>
+                                <a href="#" class="dropdown-item" id="spocUnsuccessful"> </a>
                             </li>
                         </ul>
 
                     </div>
-
                 </div>
             </div>
         </div>
