@@ -1,32 +1,68 @@
 // DOCUMENT ELEMENTS
-const inpNomeTec = document.getElementById("inpNomeTecnico");
-const inpContactoTec = document.getElementById("inpContactoTecnico");
-const txtDescricao = document.getElementById("txtDescrição");
-const btnCopiar = document.getElementById("btnCopiar");
-const select = document.getElementById("select");
+const inpTechnicianName = document.getElementById("inpNomeTecnico");
+const inpTechnicianContact = document.getElementById("inpContactoTecnico");
+const btnCopy = document.getElementById("btnCopiar");
+//const select = document.getElementById("select");
+const txtDescription = document.getElementById("txtDescrição");
+const inpZENER = document.getElementById("inpZENER");
+const inpCME = document.getElementById("inpCME");
+const spocSuccess = document.getElementById("spocSuccess");
+const spocUnsuccessful = document.getElementById("spocUnsuccessful");
+
+// ELEMENTS BY CLASS NAME
+const dropdownItems = document.getElementsByClassName("dropdown-item");
+
+// EVENT LISTENERS
+inpTechnicianName.addEventListener("input", UpdateFrase);
+inpTechnicianContact.addEventListener("input", UpdateFrase);
+btnCopy.addEventListener("click", () => {
+	// copy txtDescription to clipboard
+	navigator.clipboard.writeText(txtDescription.value);
+
+	Copied();
+});
+
+inpZENER.addEventListener("change", SetSpoc);
+inpCME.addEventListener("change", SetSpoc);
+
+// DROPDOWN ITEMS EVENT LISTENERS
+for (let i = 0; i < dropdownItems.length; i++) {
+	dropdownItems[i].addEventListener("click", () => {
+		// get the value of the dropdown item
+		let value = dropdownItems[i].innerHTML;
+		// copy the value to clipboard
+		navigator.clipboard.writeText(value.trim());
+	});
+}
 
 // VARIABLES
-let nomeTec;
-let contactoTec;
+let technicianName;
+let technicianContact;
+
+// PAGE FULLY LOADED
+window.addEventListener("load", (event) => {
+	SetSpoc();
+	console.log("page is fully loaded");
+});
 
 // FUNCTIONS
 function UpdateFrase() {
-	nomeTec = inpNomeTec.value;
-	contactoTec = inpContactoTec.value;
+	technicianName = inpTechnicianName.value;
+	technicianContact = inpTechnicianContact.value;
 
-	if (inpNomeTec.value == "") nomeTec = "*nome*";
-	if (inpContactoTec.value == "") contactoTec = "*contacto*";
+	if (inpTechnicianName.value == "") technicianName = "*nome*";
+	if (inpTechnicianContact.value == "") technicianContact = "*contacto*";
 
-	txtDescricao.value = `Técnico ${nomeTec.trim()} (${contactoTec.trim()}) contacta e informa que `;
+	txtDescription.value = `Técnico ${technicianName.trim()} (${technicianContact.trim()}) contacta e informa que `;
 }
 
-function Copiado() {
-	btnCopiar.value = " Copiado ";
-	btnCopiar.className = "btn fw-bold btn-success w-75 align-self-center";
+function Copied() {
+	btnCopy.value = " Copiado ";
+	btnCopy.className = "btn fw-bold btn-success w-75 align-self-center";
 
 	setTimeout(() => {
-		btnCopiar.value = " Copiar ";
-		btnCopiar.className = "btn fw-bold btn-primary w-75 align-self-center";
+		btnCopy.value = " Copiar ";
+		btnCopy.className = "btn fw-bold btn-primary w-75 align-self-center";
 	}, 500);
 }
 
@@ -40,23 +76,18 @@ function SelectCopied() {
 	}, 500);
 }
 
-// EVENT LISTENERS
-btnCopiar.addEventListener("click", () => {
-	// copy txtDescricao to clipboard
-	navigator.clipboard.writeText(txtDescricao.value);
-
-	Copiado();
-});
-
-select.addEventListener("focus", () => {
-	navigator.clipboard.writeText(select.value);
-	SelectCopied();
-});
-
-select.addEventListener("change", () => {
-	navigator.clipboard.writeText(select.value);
-	SelectCopied();
-});
-
-inpNomeTec.addEventListener("input", UpdateFrase);
-inpContactoTec.addEventListener("input", UpdateFrase);
+function SetSpoc() {
+	if (inpZENER.checked) {
+		spocSuccess.value = "SPOC ZENER contactado e informado.";
+		spocSuccess.textContent = spocSuccess.value;
+		spocUnsuccessful.value =
+			"Tentativa de contacto sem sucesso com SPOC ZENER.";
+		spocUnsuccessful.textContent = spocUnsuccessful.value;
+	} else if (inpCME.checked) {
+		spocSuccess.value = "SPOC CME contactado e informado.";
+		spocSuccess.textContent = spocSuccess.value;
+		spocUnsuccessful.value =
+			"Tentativa de contacto sem sucesso com SPOC CME.";
+		spocUnsuccessful.textContent = spocUnsuccessful.value;
+	}
+}
