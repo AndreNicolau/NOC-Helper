@@ -1,16 +1,21 @@
+// VARIABLES
+let technicianName;
+let technicianContact;
+let spocZener = "Palmela/Lisboa";
+
 // DOCUMENT ELEMENTS
 const inpTechnicianName = document.getElementById("inpNomeTecnico");
 const inpTechnicianContact = document.getElementById("inpContactoTecnico");
 const btnCopy = document.getElementById("btnCopiar");
-//const select = document.getElementById("select");
 const txtDescription = document.getElementById("txtDescrição");
-const inpZENER = document.getElementById("inpZENER");
 const inpCME = document.getElementById("inpCME");
 const spocSuccess = document.getElementById("spocSuccess");
 const spocUnsuccessful = document.getElementById("spocUnsuccessful");
 
 // ELEMENTS BY CLASS NAME
-const dropdownItems = document.getElementsByClassName("dropdown-item");
+const ALARMES = document.getElementsByClassName("ALARMES");
+const ZONE = document.getElementsByClassName("ZONE");
+const SPOC = document.getElementsByClassName("SPOC");
 
 // EVENT LISTENERS
 inpTechnicianName.addEventListener("input", UpdateFrase);
@@ -21,23 +26,35 @@ btnCopy.addEventListener("click", () => {
 
 	Copied();
 });
-
-inpZENER.addEventListener("change", SetSpoc);
 inpCME.addEventListener("change", SetSpoc);
 
-// DROPDOWN ITEMS EVENT LISTENERS
-for (let i = 0; i < dropdownItems.length; i++) {
-	dropdownItems[i].addEventListener("click", () => {
+// ALARMES EVENT LISTENERS
+for (let i = 0; i < ALARMES.length; i++) {
+	ALARMES[i].addEventListener("click", () => {
 		// get the value of the dropdown item
-		let value = dropdownItems[i].innerHTML;
+		let value = ALARMES[i].innerHTML;
 		// copy the value to clipboard
 		navigator.clipboard.writeText(value.trim());
 	});
 }
 
-// VARIABLES
-let technicianName;
-let technicianContact;
+// ZONE EVENT LISTENERS
+for (let i = 0; i < ZONE.length; i++) {
+	ZONE[i].addEventListener("click", () => {
+		spocZener = ZONE[i].value;
+		SetSpoc();
+	});
+}
+
+// SPOC EVENT LISTENERS
+for (let i = 0; i < SPOC.length; i++) {
+	SPOC[i].addEventListener("click", () => {
+		// get the value of the dropdown item
+		let value = SPOC[i].innerHTML;
+		// copy the value to clipboard
+		navigator.clipboard.writeText(value.trim());
+	});
+}
 
 // PAGE FULLY LOADED
 window.addEventListener("load", (event) => {
@@ -66,28 +83,17 @@ function Copied() {
 	}, 500);
 }
 
-function SelectCopied() {
-	select.className =
-		"form-select text-white bg-success my-3 w-75 align-self-center";
-
-	setTimeout(() => {
-		select.className =
-			"form-select text-white bg-primary my-3 w-75 align-self-center";
-	}, 500);
-}
-
 function SetSpoc() {
-	if (inpZENER.checked) {
-		spocSuccess.value = "SPOC ZENER contactado e informado.";
-		spocSuccess.textContent = spocSuccess.value;
-		spocUnsuccessful.value =
-			"Tentativa de contacto sem sucesso com SPOC ZENER.";
-		spocUnsuccessful.textContent = spocUnsuccessful.value;
-	} else if (inpCME.checked) {
+	if (inpCME.checked) {
 		spocSuccess.value = "SPOC CME contactado e informado.";
 		spocSuccess.textContent = spocSuccess.value;
 		spocUnsuccessful.value =
 			"Tentativa de contacto sem sucesso com SPOC CME.";
+		spocUnsuccessful.textContent = spocUnsuccessful.value;
+	} else {
+		spocSuccess.value = `SPOC ZENER ${spocZener} contactado e informado.`;
+		spocSuccess.textContent = spocSuccess.value;
+		spocUnsuccessful.value = `Tentativa de contacto sem sucesso com SPOC ZENER ${spocZener}.`;
 		spocUnsuccessful.textContent = spocUnsuccessful.value;
 	}
 }
