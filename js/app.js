@@ -75,11 +75,12 @@ function UpdateFrase() {
 
 function Copied() {
 	btnCopy.value = " Copiado ";
-	btnCopy.className = "btn fw-bold btn-success w-75 align-self-center";
+	btnCopy.className = "btn fw-bold btn-success mb-3 w-75 align-self-center";
 
 	setTimeout(() => {
 		btnCopy.value = " Copiar ";
-		btnCopy.className = "btn fw-bold btn-primary w-75 align-self-center";
+		btnCopy.className =
+			"btn fw-bold btn-primary mb-3 w-75 align-self-center";
 	}, 500);
 }
 
