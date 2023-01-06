@@ -14,6 +14,7 @@
 </head>
 
 <body class="bg-dark text-white">
+    <!-- Barra de navegação -->
     <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-primary">
         <div class="container-fluid">
 
@@ -42,7 +43,7 @@
 
     <!-- Helper -->
     <div id="accordion">
-        <div id="helperNoc" data-bs-parent="#accordion" class="collapse show" style="margin-top: 80px;">
+        <div id="helperNoc" data-bs-parent="#accordion" class="collapse" style="margin-top: 80px;">
             <div class="container-sm d-flex flex-column">
 
                 <form class="form-floating text-dark mb-2 w-75 align-self-center">
@@ -71,6 +72,8 @@
                         <ul class="dropdown-menu" aria-labelledby="buttonAlarmesGroup">
                             <li><a href="#" class="ALARMES dropdown-item"> Afetação dispersa. </a></li>
                             <li><a href="#" class="ALARMES dropdown-item"> Em análise. </a></li>
+                            <li><a href="#" class="ALARMES dropdown-item"> SNR dentro dos parâmetros. </a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -82,7 +85,8 @@
 
                         <ul class="dropdown-menu" aria-labelledby="buttonSpocGroup">
                             <li class="dropdown-item">
-                                <input type="radio" name="ZONE" id="spocPalmela" value="Palmela/Lisboa" class="ZONE" checked>
+                                <input type="radio" name="ZONE" id="spocPalmela" value="Palmela/Lisboa" class="ZONE"
+                                    checked>
                                 <label for="spocPalmela">Palmela/Lisboa</label>
                             </li>
                             <li class="dropdown-item">
@@ -107,7 +111,7 @@
                             </li>
                         </ul>
                         <button class="btn btn-primary">
-                            <input type="radio" name="company" id="inpCME" value="CME">
+                            <input type="radio" name="ZONE" id="inpCME" value="CME">
                             <label for="inpCME">CME</label>
                         </button>
                     </div>
@@ -130,7 +134,7 @@
             </div>
         </div>
 
-        <!-- SOS TELEGRAM -->
+        <!-- SOS Telegram -->
         <div id="sosTelegram" data-bs-parent="#accordion" class="collapse" style="margin-top: 80px;">
             <div class="container-sm p-2 bg-telegram rounded text-center w-75">
                 <h1 class="fw-bold">SOS TELEGRAM</h1>
@@ -226,9 +230,10 @@
         </div>
 
         <!-- MATRIZ DE ESCALAMENTO-->
-        <div id="matrizEscalamento" data-bs-parent="#accordion" class="collapse" style="margin-top: 80px;">
+        <div id="matrizEscalamento" data-bs-parent="#accordion" class="collapse show" style="margin-top: 80px;">
             <div class="container">
                 <div class="table-responsive">
+                    <!-- Tabela de escalamento -->
                     <table class="table align-middle text-center table-bordered table-striped table-dark">
                         <thead class="align-middle">
                             <th scope="col" class="bg-secondary">FAILURE</th>
@@ -325,6 +330,7 @@
                         </tbody>
                     </table>
 
+                    <!-- Tabela de Contactos -->
                     <table class="table table-dark table-bordered table-striped text-center align-middle">
                         <thead>
                             <th colspan="5" class="bg-secondary">Escalamento interno</th>
@@ -349,24 +355,9 @@
                             </tr>
                             <tr>
                                 <td rowspan="26">Level 2</td>
-
                                 <td rowspan="7">Zener - sectores</td>
-                                <td>Palmela/Lisboa</td>
-                                <td colspan="2">928043168</td>
-                            </tr>
-                            <tr>
-                                <td class="text-warning fw-bold">
-                                    Provisório Palmela/Lisboa
-                                </td>
-                                <td colspan="2" class="text-warning">
-                                    Paulo Macedo 965734891
-                                </td>
-                             </tr>
-
-                                <td rowspan="6">Zener - sectores</td>
                                 <td>Palmela / Lisboa</td>
                                 <td colspan="2" class="text-warning fw-bold">Provisório Vítor Santos 928098494</td>
-
                             </tr>
                             <tr>
                                 <td>Caldas da Rainha</td>
@@ -378,32 +369,21 @@
                             </tr>
                             <tr>
                                 <td>Elvas/Portalegre</td>
-                                <td colspan="2">928032839</td>
+                                <td colspan="2">928034506</td>
                             </tr>
-                            <tr>
-
-                            <tr>
-                                <td>Évora/Beja</td>
-                                <td colspan="2">928034032</td>
-                            </tr>
-                            <tr>
-                                <td>Alcácer/St André</td>
-                                <td colspan="2">928032839</td>
-                            </tr>
-
                             <tr>
                                 <td>Évora / Beja</td>
-                                <td colspan="2" class="text-warning fw-bold">Provisório Paulo Matos 928070260</td>
+                                <td colspan="2" class="text-warning fw-bold">Provisório Paulo Matos - 928070260 </td>
                             </tr>
                             <tr>
                                 <td>Alcácer / St André</td>
-                                <td colspan="2">Provisório Paulo Matos 928070260</td>
+                                <td colspan="2" class="text-warning fw-bold">Provisório Paulo Matos - 928070260 </td>
                             </tr>
 
                             <tr>
                                 <td rowspan="2">SPOC - ZENER</td>
                                 <td>2ª linha (ligar se sectores não atende)</td>
-                                <td colspan="2">928021788</td>
+                                <td colspan="2">Filipe Pinto 928077787</td>
                             </tr>
                             <tr>
                                 <td>3ª linha (ligar se 2ª linha não atende)</td>
@@ -420,6 +400,62 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+
+                <!-- GRID LAYOUT -->
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col border bg-secondary">
+                            Escalamento Interno
+                        </div>
+                    </div>
+
+                    <div class="row row-cols-3">
+                        <div class="col border bg-primary">Empresa</div>
+                        <div class="col border bg-primary">Nome</div>
+                        <div class="col border bg-primary">Contacto</div>
+
+                        <div class="col border">Zener</div>
+                        <div class="col border">Palmela / Lisboa</div>
+                        <div class="col border">Provisório Vítor Santos - 928098494</div>
+
+                        <div class="col border">Zener</div>
+                        <div class="col border">Caldas da Rainha</div>
+                        <div class="col border">928025416</div>
+
+                        <div class="col border">Zener</div>
+                        <div class="col border">Algarve</div>
+                        <div class="col border">928034863</div>
+
+                        <div class="col border">Zener</div>
+                        <div class="col border">Elvas / Portalegre</div>
+                        <div class="col border">928034506</div>
+
+                        <div class="col border">Zener</div>
+                        <div class="col border">Évora / Beja</div>
+                        <div class="col border">Provisório Paulo Matos - 928070260</div>
+
+                        <div class="col border">Zener</div>
+                        <div class="col border">Alcácer / St André</div>
+                        <div class="col border">Provisório Paulo Matos - 928070260</div>
+
+                        <div class="col border">Zener</div>
+                        <div class="col border">2ª Linha</div>
+                        <div class="col border">Filipe Pinto 928077787</div>
+
+                        <div class="col border">Zener</div>
+                        <div class="col border">3ª Linha</div>
+                        <div class="col border">928034894</div>
+
+                        <div class="col border">CME</div>
+                        <div class="col border">1ª Linha</div>
+                        <div class="col border">Pedro Noverça - 931048171</div>
+
+                        <div class="col border">CME</div>
+                        <div class="col border">2ª Linha</div>
+                        <div class="col border">931048314</div>
+
+                    </div>
                 </div>
             </div>
         </div>
