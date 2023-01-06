@@ -14,7 +14,7 @@
 </head>
 
 <body class="bg-dark text-white">
-    <!-- Barra de navegação -->
+    <!-- NAVIGATION BAR -->
     <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-primary">
         <div class="container-fluid">
 
@@ -27,22 +27,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
                     <li class="nav-item">
-                        <a href="#helperNoc" data-bs-toggle="collapse" class="nav-link">HELPER</a>
+                        <a href="#helperNoc" data-bs-toggle="collapse" class="nav-link text-white">HELPER</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#sosTelegram" data-bs-toggle="collapse" class="nav-link">SOS TELEGRAM</a>
+                        <a href="#sosTelegram" data-bs-toggle="collapse" class="nav-link text-white">SOS TELEGRAM</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#matrizEscalamento" data-bs-toggle="collapse" class="nav-link">MATRIZ DE
-                            ESCALAMENTO</a>
+                        <a href="#contacts" data-bs-toggle="collapse" class="nav-link text-white">CONTACTOS</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- end of navigation bar-->
 
-    <!-- Helper -->
     <div id="accordion">
+        <!-- Helper -->
         <div id="helperNoc" data-bs-parent="#accordion" class="collapse show" style="margin-top: 80px;">
             <div class="container-sm d-flex flex-column">
 
@@ -133,6 +133,7 @@
                 </div>
             </div>
         </div>
+        <!-- end of helper -->
 
         <!-- SOS Telegram -->
         <div id="sosTelegram" data-bs-parent="#accordion" class="collapse" style="margin-top: 80px;">
@@ -228,108 +229,12 @@
                 <button id="sosTelegram_btnCopiar" class="btn btn-primary w-50">Copiar</button>
             </div>
         </div>
+        <!-- end of sos telegram -->
 
-        <!-- MATRIZ DE ESCALAMENTO-->
-        <div id="matrizEscalamento" data-bs-parent="#accordion" class="collapse" style="margin-top: 80px;">
+        <!-- CONTACTS -->
+        <div id="contacts" data-bs-parent="#accordion" class="collapse" style="margin-top: 80px;">
             <div class="container">
                 <div class="table-responsive">
-                    <!-- Tabela de escalamento -->
-                    <table class="table align-middle text-center table-bordered table-striped table-dark">
-                        <thead class="align-middle">
-                            <th scope="col" class="bg-secondary">FAILURE</th>
-                            <th scope="col" class="bg-secondary">TT Info Update (max.)</th>
-                            <th scope="col" colspan="4" class="bg-secondary">Escalation procedure</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>x = # Customers</td>
-                                <td></td>
-                                <td>Level 2</td>
-                                <td>Level 3</td>
-                                <td>Level 4</td>
-                                <td>Level 5</td>
-                            </tr>
-                            <tr>
-                                <td>x &lt; 250</td>
-                                <td rowspan="2">2H em 2H</td>
-                                <td rowspan="4">5min</td>
-                                <td>3H</td>
-                                <td>6H</td>
-                                <td>24H</td>
-                            </tr>
-                            <tr>
-                                <td>250 =&lt; x &lt; 500</td>
-                                <td rowspan="2">30min</td>
-                                <td rowspan="2">3H</td>
-                                <td rowspan="2">8H</td>
-                            </tr>
-                            <tr>
-                                <td>500 =&lt; x &lt; 1000</td>
-                                <td>1H em 1H</td>
-                            </tr>
-                            <tr>
-                                <td>x &gt; 1000</td>
-                                <td>30min em 30min</td>
-                                <td>5min</td>
-                                <td>1H</td>
-                                <td>4H</td>
-                            </tr>
-                            <tr>
-                                <td colspan="6"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="6"></td>
-                            </tr>
-                            <tr>
-                                <td>Corte reincidente &lt; 2meses; NOC não consegue acionar SPOC 1ª e 2ª linha; técnico
-                                    indica que não tem condições para resolver ou ausentou-se.</td>
-                                <td></td>
-                                <td><span class="fw-bold">NA</span></td>
-                                <td>5 m</td>
-                                <td colspan="2">
-                                    <span class="fw-bold">NA</span>
-                                    <p>
-                                        Entram no escalamento dos incidentes.
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="6"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="6"></td>
-                            </tr>
-                            <tr>
-                                <td>Anel (SDH/DWDM/Rede ON)</td>
-                                <td rowspan="3"> 30min em 30min</td>
-                                <td rowspan="3">5min</td>
-                                <td rowspan="3">5min</td>
-                                <td rowspan="3">1,5h</td>
-                                <td rowspan="3">4H</td>
-                            </tr>
-                            <tr>
-                                <td>Core IP; Switch Voz, HE TV</td>
-                            </tr>
-                            <tr>
-                                <td>Acesso a nível nacional Cable Modems; STB's</td>
-                            </tr>
-                            <tr>
-                                <td colspan="6"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="6"></td>
-                            </tr>
-                            <tr>
-                                <td>TV canais</td>
-                                <td>1H em 1H</td>
-                                <td>5min</td>
-                                <td>5min</td>
-                                <td>2H</td>
-                                <td>8H</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
                     <!-- CONTACTS TABLE -->
                     <table class="table table-bordered table-striped table-dark text-center align-middle">
                         <thead class="bg-secondary">
@@ -338,7 +243,7 @@
                         <tbody>
                             <tr>
                                 <td class="fw-bold">Empresa</td>
-                                <td class="fw-bold">Nome</td>
+                                <td class="fw-bold">Nome / Zona</td>
                                 <td class="fw-bold">Contacto</td>
                             </tr>
                             <tr>
@@ -385,7 +290,66 @@
                             </tr>
                         </tbody>
                     </table>
-                    <!-- END OF CONTACTS TABLE-->
+                    <!-- end of contacts table -->
+
+                    <!-- FIELD CONTACTS TABLE-->
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-dark text-center align-middle">
+                            <thead class="bg-secondary">
+                                <th colspan="3" scope="col" class="bg-secondary">FIELD</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fw-bold">Nome</td>
+                                    <td class="fw-bold">Zona</td>
+                                    <td class="fw-bold">Telemóvel</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Hélder Rainho</td>
+                                    <td>Caldas da Rainha</td>
+                                    <td>928080204</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Luís Miguel Sousa</td>
+                                    <td>Zona Norte</td>
+                                    <td>932382032</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Rui Fernandes</td>
+                                    <td>Beiras / Viseu / Seia</td>
+                                    <td>936043044</td>
+                                </tr>
+
+                                <tr>
+                                    <td>João Paulo Silva</td>
+                                    <td>Palmela / Lisboa</td>
+                                    <td>932382014</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Sérgio Costa</td>
+                                    <td>Zona Sul</td>
+                                    <td>932281810</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Rui Silva</td>
+                                    <td>Coordenador</td>
+                                    <td>939471346</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Rosa Pasadas</td>
+                                    <td>O&M Manager</td>
+                                    <td>933674528</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- end of field contacts table -->
                 </div>
             </div>
         </div>
