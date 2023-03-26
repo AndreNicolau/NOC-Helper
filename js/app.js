@@ -70,7 +70,7 @@ function UpdateFrase() {
 	if (inpTechnicianName.value == "") technicianName = "*nome*";
 	if (inpTechnicianContact.value == "") technicianContact = "*contacto*";
 
-	txtDescription.value = `Técnico ${technicianName.trim()} (${technicianContact.trim()}) contacta e informa que `;
+	txtDescription.value = `Técnico ${technicianName.trim()} (${technicianContact.trim()}) contacta, informa que `;
 }
 
 function Copied() {
